@@ -35,17 +35,15 @@ public class LinkedStack<T> implements Stack<T> {
     
     @Override
     public String toString() {
-        String result = "LinkedStack: size = " + size();
-        result += ", contents = [";
+        String result = "LinkedStack contents = ";
         for (ListNode<T> node = top; node != null; node = node.getNext()) {
             if (node != top) {
                 result += ", ";
             }
             result += node.getItem();
         }
-        result += "], isEmpty() = " + isEmpty();
-        if (!isEmpty()) {
-            result += ", top() = " + top();
+        if(isEmpty()){
+            result += "Empty!";
         }
         return result;
     }

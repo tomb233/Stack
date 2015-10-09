@@ -50,19 +50,17 @@ public class ArrayStack<T> implements Stack<T> {
     
     @Override
     public String toString() {
-        String result = "ArrayStack: size = " + size;
-        result += ", topIndex = " + topIndex;
-        result += ", contents = [";
+
+        String result = "ArrayStack contents = ";
         for (int i = 0; i < size; i++) {
             if (i > 0) {
                 result += ", ";
             }
             result += storage[i];
+
         }
-        result += "], isEmpty() = " + isEmpty();
-        if (!isEmpty()) {
-            result += ", top() = " + top();
-        }
+
+
         return result;
     }
 }
